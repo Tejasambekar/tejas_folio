@@ -1,106 +1,140 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
-All colors MUST be HSL.
+/* Tejas Ambekar Portfolio - Vibrant Design System
+   Color Palette: Electric Blue, Neon Purple, Cyber Pink, Mint accents
+   All colors MUST be HSL.
 */
 
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(240 10% 3.9%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(240 10% 3.9%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(240 10% 3.9%);
-  --primary: hsl(240 5.9% 10%);
-  --primary-foreground: hsl(0 0% 98%);
-  --secondary: hsl(240 4.8% 95.9%);
-  --secondary-foreground: hsl(240 5.9% 10%);
-  --muted: hsl(240 4.8% 95.9%);
-  --muted-foreground: hsl(240 3.8% 46.1%);
-  --accent: hsl(240 4.8% 95.9%);
-  --accent-foreground: hsl(240 5.9% 10%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 5.9% 90%);
-  --input: hsl(240 5.9% 90%);
-  --ring: hsl(240 5.9% 10%);
-  --radius: 0.5rem;
-  --sidebar-background: hsl(0 0% 98%);
-  --sidebar-foreground: hsl(240 5.3% 26.1%);
-  --sidebar-primary: hsl(240 5.9% 10%);
-  --sidebar-primary-foreground: hsl(0 0% 98%);
-  --sidebar-accent: hsl(240 4.8% 95.9%);
-  --sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --sidebar-border: hsl(220 13% 91%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  /* Core palette - Dark theme by default for developer portfolio */
+  --background: hsl(222 47% 6%);
+  --foreground: hsl(210 40% 98%);
+  
+  --card: hsl(222 47% 9%);
+  --card-foreground: hsl(210 40% 98%);
+  
+  --popover: hsl(222 47% 9%);
+  --popover-foreground: hsl(210 40% 98%);
+  
+  /* Vibrant primary - Electric Blue */
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(222 47% 6%);
+  
+  /* Neon Purple accent */
+  --secondary: hsl(270 70% 55%);
+  --secondary-foreground: hsl(210 40% 98%);
+  
+  /* Muted tones */
+  --muted: hsl(222 40% 15%);
+  --muted-foreground: hsl(215 20% 65%);
+  
+  /* Cyber Pink accent */
+  --accent: hsl(330 85% 60%);
+  --accent-foreground: hsl(210 40% 98%);
+  
+  /* Mint success color */
+  --success: hsl(158 64% 52%);
+  --success-foreground: hsl(222 47% 6%);
+  
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(210 40% 98%);
+  
+  --border: hsl(222 30% 18%);
+  --input: hsl(222 30% 18%);
+  --ring: hsl(217 91% 60%);
+  --radius: 0.75rem;
+  
+  /* Gradient definitions */
+  --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 70% 55%));
+  --gradient-accent: linear-gradient(135deg, hsl(270 70% 55%), hsl(330 85% 60%));
+  --gradient-hero: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 11%) 100%);
+  --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(217, 91%, 60%, 0.15), transparent 40%);
+  
+  /* Custom shadows */
+  --shadow-glow: 0 0 30px hsla(217, 91%, 60%, 0.3);
+  --shadow-card: 0 4px 24px hsla(0, 0%, 0%, 0.4);
+  
+  /* Sidebar */
+  --sidebar-background: hsl(222 47% 8%);
+  --sidebar-foreground: hsl(210 40% 98%);
+  --sidebar-primary: hsl(217 91% 60%);
+  --sidebar-primary-foreground: hsl(222 47% 6%);
+  --sidebar-accent: hsl(222 40% 15%);
+  --sidebar-accent-foreground: hsl(210 40% 98%);
+  --sidebar-border: hsl(222 30% 18%);
+  --sidebar-ring: hsl(217 91% 60%);
 
-  /* Shugar Design System Variables */
-  --context-card-border: hsla(0, 0%, 92%, 1);
-  --ds-red-800: oklch(58.19% 0.2482 25.15);
-  --ds-red-900: oklch(54.99% 0.232 25.29);
-  --ds-amber-800: oklch(77.21% 0.1991 64.28);
-  --ds-amber-850: hsl(33, 96%, 42%);
-  --ds-gray-100: hsla(0, 0%, 95%, 1);
-  --ds-gray-400: hsla(0, 0%, 92%, 1);
-  --ds-gray-700: hsla(0, 0%, 56%, 1);
-  --ds-gray-1000: hsla(0, 0%, 9%, 1);
-  --ds-gray-1000-h: hsl(0, 0%, 22%);
-  --ds-gray-alpha-200: hsla(0, 0%, 0%, 0.08);
-  --ds-gray-alpha-400: hsla(0, 0%, 0%, 0.08);
-  --ds-background-100: hsla(0, 0%, 100%, 1);
+  /* Legacy Design System Variables */
+  --context-card-border: hsl(222 30% 18%);
+  --ds-gray-100: hsl(222 40% 12%);
+  --ds-gray-400: hsl(222 30% 18%);
+  --ds-gray-700: hsl(215 20% 55%);
+  --ds-gray-1000: hsl(210 40% 98%);
+  --ds-background-100: hsl(222 47% 6%);
   --ds-focus-color: var(--ring);
   --ds-focus-ring: 0 0 0 2px var(--ds-background-100), 0 0 0 4px var(--ds-focus-color);
-  --ds-shadow-border: 0 0 0 1px rgba(0, 0, 0, 0.08);
-  --ds-shadow-small: 0px 2px 2px rgba(0, 0, 0, 0.04);
+  --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 100%, 0.08);
+  --ds-shadow-small: 0px 2px 4px hsla(0, 0%, 0%, 0.3);
   --ds-shadow-border-small: var(--ds-shadow-border), var(--ds-shadow-small);
 }
 
-.dark {
-  --background: hsl(240 10% 3.9%);
-  --foreground: hsl(0 0% 98%);
-  --card: hsl(240 10% 3.9%);
-  --card-foreground: hsl(0 0% 98%);
-  --popover: hsl(240 10% 3.9%);
-  --popover-foreground: hsl(0 0% 98%);
-  --primary: hsl(0 0% 98%);
-  --primary-foreground: hsl(240 5.9% 10%);
-  --secondary: hsl(240 3.7% 15.9%);
-  --secondary-foreground: hsl(0 0% 98%);
-  --muted: hsl(240 3.7% 15.9%);
-  --muted-foreground: hsl(240 5% 64.9%);
-  --accent: hsl(240 3.7% 15.9%);
-  --accent-foreground: hsl(0 0% 98%);
-  --destructive: hsl(0 62.8% 30.6%);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: hsl(240 3.7% 15.9%);
-  --input: hsl(240 3.7% 15.9%);
-  --ring: hsl(240 4.9% 83.9%);
-  --sidebar-background: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
+.light {
+  --background: hsl(210 40% 98%);
+  --foreground: hsl(222 47% 11%);
+  
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(222 47% 11%);
+  
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222 47% 11%);
+  
+  --primary: hsl(217 91% 55%);
+  --primary-foreground: hsl(0 0% 100%);
+  
+  --secondary: hsl(270 70% 50%);
+  --secondary-foreground: hsl(0 0% 100%);
+  
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215 20% 40%);
+  
+  --accent: hsl(330 85% 55%);
+  --accent-foreground: hsl(0 0% 100%);
+  
+  --success: hsl(158 64% 45%);
+  --success-foreground: hsl(0 0% 100%);
+  
+  --destructive: hsl(0 84% 55%);
+  --destructive-foreground: hsl(0 0% 100%);
+  
+  --border: hsl(214 32% 91%);
+  --input: hsl(214 32% 91%);
+  --ring: hsl(217 91% 55%);
+  
+  --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%), hsl(270 70% 50%));
+  --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(217 91% 98%) 100%);
+  --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsla(217, 91%, 55%, 0.08), transparent 40%);
+  
+  --shadow-glow: 0 0 30px hsla(217, 91%, 55%, 0.2);
+  --shadow-card: 0 4px 24px hsla(0, 0%, 0%, 0.08);
+  
+  --sidebar-background: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(222 47% 11%);
+  --sidebar-primary: hsl(217 91% 55%);
   --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
-
-  /* Shugar Design System Variables - Dark Mode */
-  --context-card-border: hsla(0, 0%, 18%, 1);
-  --ds-red-800: oklch(58.01% 0.227 25.12);
-  --ds-red-900: oklch(69.96% 0.2136 22.03);
-  --ds-amber-800: oklch(77.21% 0.1991 64.28);
-  --ds-gray-100: hsla(0, 0%, 10%, 1);
-  --ds-gray-400: hsla(0, 0%, 18%, 1);
-  --ds-gray-700: hsla(0, 0%, 56%, 1);
-  --ds-gray-1000: hsla(0, 0%, 93%, 1);
-  --ds-gray-1000-h: hsl(0, 0%, 80%);
-  --ds-gray-alpha-200: hsla(0, 0%, 100%, 0.09);
-  --ds-gray-alpha-400: hsla(0, 0%, 100%, 0.14);
-  --ds-background-100: hsla(0,0%,4%, 1);
-  --ds-shadow-border: 0 0 0 1px rgba(255, 255, 255, 0.145);
-  --ds-shadow-small: 0px 1px 2px rgba(0, 0, 0, 0.16);
-  --ds-shadow-border-small: var(--ds-shadow-border), var(--ds-shadow-small);
+  --sidebar-accent: hsl(210 40% 96%);
+  --sidebar-accent-foreground: hsl(222 47% 11%);
+  --sidebar-border: hsl(214 32% 91%);
+  --sidebar-ring: hsl(217 91% 55%);
+  
+  --context-card-border: hsl(214 32% 91%);
+  --ds-gray-100: hsl(210 40% 96%);
+  --ds-gray-400: hsl(214 32% 91%);
+  --ds-gray-700: hsl(215 20% 55%);
+  --ds-gray-1000: hsl(222 47% 11%);
+  --ds-background-100: hsl(0 0% 100%);
+  --ds-shadow-border: 0 0 0 1px hsla(0, 0%, 0%, 0.06);
+  --ds-shadow-small: 0px 2px 4px hsla(0, 0%, 0%, 0.06);
 }
 
 @theme {
@@ -118,6 +152,8 @@ All colors MUST be HSL.
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -132,19 +168,11 @@ All colors MUST be HSL.
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Shugar Design System Colors */
   --color-context-card-border: var(--context-card-border);
-  --color-red-800: var(--ds-red-800);
-  --color-red-900: var(--ds-red-900);
-  --color-amber-800: var(--ds-amber-800);
-  --color-amber-850: var(--ds-amber-850);
   --color-gray-100: var(--ds-gray-100);
   --color-gray-400: var(--ds-gray-400);
   --color-gray-700: var(--ds-gray-700);
   --color-gray-1000: var(--ds-gray-1000);
-  --color-gray-1000-h: var(--ds-gray-1000-h);
-  --color-gray-alpha-200: var(--ds-gray-alpha-200);
-  --color-gray-alpha-400: var(--ds-gray-alpha-400);
   --color-background-100: var(--ds-background-100);
   --shadow-focus-ring: var(--ds-focus-ring);
   --shadow-border-small: var(--ds-shadow-border-small);
@@ -158,21 +186,34 @@ All colors MUST be HSL.
 }
 
 @keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
 }
 
 @keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
-  }
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@keyframes typewriter-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsla(217, 91%, 60%, 0.4); }
+  50% { box-shadow: 0 0 40px hsla(217, 91%, 60%, 0.6), 0 0 60px hsla(270, 70%, 55%, 0.3); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @layer base {
@@ -181,7 +222,26 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    cursor: none;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
   }
 }
 
@@ -193,5 +253,67 @@ All colors MUST be HSL.
 
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    position: relative;
+    background: var(--card);
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: var(--radius);
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .typewriter-cursor::after {
+    content: '|';
+    animation: typewriter-blink 0.8s step-end infinite;
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  .glass-effect {
+    background: hsla(222, 47%, 11%, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsla(217, 91%, 60%, 0.1);
+  }
+
+  .glow-card {
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .glow-card:hover {
+    box-shadow: var(--shadow-glow), var(--shadow-card);
+    transform: translateY(-4px);
   }
 }
