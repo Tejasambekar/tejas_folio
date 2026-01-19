@@ -7,7 +7,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/tejas_folio/",   // <-- REQUIRED FOR GITHUB PAGES
+  // Use repo base only in production (GitHub Pages)
+  base: mode === "production" ? "/tejas_folio/" : "/",
+
   server: {
     host: "::",
     port: 8080,
@@ -19,3 +21,4 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+``
