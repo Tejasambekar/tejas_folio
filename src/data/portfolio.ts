@@ -4,8 +4,9 @@ export const personalInfo = {
   name: 'Tejas Ambekar',
   titles: [
     'Data Scientist',
-    'AI/ML Engineer',
     'LLM Developer',
+    'AI/ML Engineer',
+    
     
   ],
   email: 'tejasambekarkumar@gmail.com',
