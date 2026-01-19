@@ -23,9 +23,9 @@ export function AboutSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-5 gap-12 mt-12">
+        <div className="grid md:grid-cols-2 gap-16 mt-12">
           {/* Main content */}
-          <div className="md:col-span-3 space-y-6">
+          <div className="space-y-6">
             <ScrollReveal delay={0.1}>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {personalInfo.introduction}
@@ -47,7 +47,7 @@ export function AboutSection() {
           </div>
 
           {/* Education sidebar */}
-          <div className="md:col-span-2">
+          <div>
             <ScrollReveal delay={0.2}>
               <div className="gradient-border p-6 rounded-xl bg-card">
                 <div className="flex items-center gap-2 mb-6">
