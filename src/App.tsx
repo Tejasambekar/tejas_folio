@@ -88,14 +88,14 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
-            <SkipToContent />
-            <Layout>
-              <Suspense fallback={<LoadingFallback />}>
-                <AnimatedRoutes />
-              </Suspense>
-            </Layout>
-          </BrowserRouter>
+          
+          <SkipToContent />
+          <Layout>
+            <Suspense fallback={<LoadingFallback />}>
+              <AnimatedRoutes />
+            </Suspense>
+          </Layout>
+
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>
