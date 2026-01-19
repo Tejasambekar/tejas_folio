@@ -6,15 +6,15 @@ export const personalInfo = {
     'Data Scientist',
     'AI/ML Engineer',
     'LLM Developer',
-    'Full Stack Developer'
+    
   ],
   email: 'tejasambekarkumar@gmail.com',
   phone: '+91-8919355145',
   location: 'Hyderabad, India',
   bio: 'B.E. in Artificial Intelligence and Data Science from Chaitanya Bharathi Institute of Technology with a passion for building intelligent systems and scalable solutions.',
   tagline: 'Transforming data into intelligent solutions',
-  introduction: 'I am a passionate AI/ML engineer and data scientist with expertise in building end-to-end machine learning pipelines, LLM-powered applications, and production-ready software solutions. Currently working at EPAM Systems as a Junior Data Scientist.',
-  githubUsername: 'tejasambekar', // Replace with actual GitHub username
+  introduction: 'I am a passionate Data Scientist and AI/ML engineer with expertise in building end-to-end machine learning pipelines, LLM-powered applications, and production-ready software solutions. Currently working at EPAM Systems as a Junior Data Scientist.',
+  githubUsername: 'Tejasambekar', // Replace with actual GitHub username
   socialLinks: {
     github: 'https://github.com/tejasambekar',
     linkedin: 'https://linkedin.com/in/tejasambekar',
