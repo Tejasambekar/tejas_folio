@@ -38,10 +38,6 @@ export function ProjectsSection() {
               className="group"
             >
               <div className="glow-card h-full bg-card rounded-2xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all">
-                {/* Project image placeholder */}
-                <div className="h-48 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center">
-                  <Code className="w-16 h-16 text-primary/50 group-hover:text-primary transition-colors" />
-                </div>
                 
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:gradient-text transition-all">
