@@ -26,7 +26,7 @@ export function ResumeSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid gap-12">
           {/* Experience */}
           <div>
             <ScrollReveal delay={0.1}>
