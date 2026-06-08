@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -7,8 +6,13 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Lovable publishes this site at the domain root, so assets must load from `/`.
-  base: "/",
+  // Build to /docs folder for GitHub Pages
+  base: "/tejas_folio/",
+  
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
 
   server: {
     host: "::",
@@ -21,4 +25,3 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
-``
