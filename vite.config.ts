@@ -6,11 +6,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Build to /docs folder for GitHub Pages
-  base: "/tejas_folio/",
-  
+  base: process.env.GH_PAGES === "true" ? "/tejas_folio/" : "/",
+
   build: {
-    outDir: "docs",
+    outDir: process.env.GH_PAGES === "true" ? "docs" : "dist",
     emptyOutDir: true,
   },
 
