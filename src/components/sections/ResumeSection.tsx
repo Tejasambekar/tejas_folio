@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { experience, education } from '@/data/portfolio';
+import { experience } from '@/data/portfolio';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { Briefcase, GraduationCap, Calendar, Building2, FileText } from 'lucide-react';
+import { Briefcase, Calendar, Building2, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function ResumeSection() {
