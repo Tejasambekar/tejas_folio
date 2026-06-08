@@ -7,8 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Use repo base only in production (GitHub Pages)
-  base: process.env.GH_PAGES === "true" ? "/tejas_folio/" : "/",    
+  // Lovable publishes this site at the domain root, so assets must load from `/`.
+  base: "/",
 
   server: {
     host: "::",
