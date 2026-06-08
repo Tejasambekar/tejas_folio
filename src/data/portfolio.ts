@@ -14,7 +14,7 @@ export const personalInfo = {
   location: 'Hyderabad, India',
   bio: 'B.E. in Artificial Intelligence and Data Science from Chaitanya Bharathi Institute of Technology with a passion for building intelligent systems and scalable solutions.',
   tagline: 'Transforming data into intelligent solutions',
-  introduction: 'I am a passionate Data Scientist and AI/ML engineer with expertise in building end-to-end machine learning pipelines, LLM-powered applications, and production-ready software solutions. Currently working at EPAM Systems as a Junior Data Scientist.',
+  introduction: 'I am a passionate Data Scientist and AI/ML engineer with expertise in building end-to-end machine learning pipelines, LLM-powered applications, and production-ready software solutions. Currently working at Accuris as a Data and Gen AI Engineer.',
   githubUsername: 'Tejasambekar', // Replace with actual GitHub username
   socialLinks: {
     github: 'https://github.com/tejasambekar',
@@ -49,9 +49,20 @@ export const education: Education[] = [
 
 export const experience: Experience[] = [
   {
+    title: 'Data and Gen AI Engineer',
+    company: 'Accuris',
+    period: 'June 2026 - Present',
+    type: 'Full-time',
+    highlights: [
+      'Engineering a domain-specific knowledge ontology for curated data to provide structured context and grounding for downstream AI and LLM applications',
+      'Developed and deployed an operational Python-based microservice, exposing robust API endpoints integrated with data validation and basic testing frameworks',
+      'Designing and implementing a Medallion Architecture (Bronze, Silver, Gold) pipeline to ingest, clean, and standardize unstructured engineering data'
+    ]
+  },
+  {
     title: 'Junior Data Scientist',
     company: 'EPAM Systems',
-    period: 'July 2025 - Present',
+    period: 'July 2025 - May 2026',
     type: 'Full-time',
     highlights: [
       'Designed and deployed a real-time, five-stage document intelligence pipeline for financial data',
