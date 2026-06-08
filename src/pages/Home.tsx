@@ -21,10 +21,12 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ResumeSection />
-        <SkillsSection />
-        <AchievementsSection />
         <ProjectsSection />
+        <SkillsSection />
         <CertificationsSection />
+        <AchievementsSection />
+        {/* <ProjectsSection /> */}
+        
         <ContactSection />
       </div>
     </>

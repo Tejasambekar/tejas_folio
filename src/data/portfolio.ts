@@ -51,7 +51,7 @@ export const experience: Experience[] = [
   {
     title: 'Data and Gen AI Engineer',
     company: 'Accuris',
-    period: 'June 2026 - Present',
+    period: 'May 2026 - Present',
     type: 'Full-time',
     highlights: [
       'Engineering a domain-specific knowledge ontology for curated data to provide structured context and grounding for downstream AI and LLM applications',
@@ -62,7 +62,7 @@ export const experience: Experience[] = [
   {
     title: 'Junior Data Scientist',
     company: 'EPAM Systems',
-    period: 'July 2025 - May 2026',
+    period: 'July 2025 - April 2026',
     type: 'Full-time',
     highlights: [
       'Designed and deployed a real-time, five-stage document intelligence pipeline for financial data',
