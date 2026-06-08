@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { experience, education } from '@/data/portfolio';
+import { experience } from '@/data/portfolio';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { Briefcase, GraduationCap, Calendar, Building2, FileText } from 'lucide-react';
+import { Briefcase, Calendar, Building2, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function ResumeSection() {
@@ -26,7 +26,7 @@ export function ResumeSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid gap-12">
           {/* Experience */}
           <div>
             <ScrollReveal delay={0.1}>
@@ -82,51 +82,6 @@ export function ResumeSection() {
                           </li>
                         ))}
                       </ul>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Education */}
-          <div>
-            <ScrollReveal delay={0.2}>
-              <div className="flex items-center gap-3 mb-8">
-                <div className="p-2 rounded-lg bg-secondary/10">
-                  <GraduationCap className="w-5 h-5 text-secondary" />
-                </div>
-                <h3 className="text-2xl font-semibold">Education</h3>
-              </div>
-            </ScrollReveal>
-
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-secondary via-accent to-primary" />
-
-              <div className="space-y-8">
-                {education.map((edu, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="relative pl-12 group"
-                  >
-                    {/* Timeline dot */}
-                    <div className="absolute left-2 top-1 w-5 h-5 rounded-full border-2 border-secondary bg-background group-hover:bg-secondary transition-colors" />
-                    
-                    <div className="glow-card bg-card p-6 rounded-xl">
-                      <h4 className="text-lg font-semibold text-foreground">{edu.degree}</h4>
-                      <p className="text-muted-foreground">{edu.institution}</p>
-                      <div className="flex items-center justify-between mt-3">
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Calendar className="w-3 h-3" />
-                          <span>{edu.period}</span>
-                        </div>
-                        <span className="text-sm font-medium text-success">{edu.score}</span>
-                      </div>
                     </div>
                   </motion.div>
                 ))}
